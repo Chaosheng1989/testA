@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Josh" content="Josh">
+  <meta name="description" content="發現來自世界各地最好的咖啡豆">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beans Coffee" />
+  <title>Beans Coffee 會員登入</title>
+  <link rel="stylesheet" href="css/all.css" class="css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT1H98HX27"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TT1H98HX27');
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="JS/js.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <nav>
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li><a href="https://chaosheng1989.github.io/BeansCoffee/index.html#about-us">關於我們</a></li>
+            <li><a href="https://chaosheng1989.github.io/BeansCoffee/index.html#product-head">產品列表</a></li>
+            <li><a href="signup.html">註冊會員</a></li>
+            <li><a href="login.html" class="login-btn">會員登入</a></li>
+          </ul>
+          <div class="cart-icon-wrapper">
+            <a href="cart.html" class="cart-btn">購物車</a>
+            <div class="menu-icon">&#9776;</div><!-- 新增漢堡選單按鈕 -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="login-banner">
+      <img
+        src="https://media.istockphoto.com/id/1411720693/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=8k47TxB-D4c5J-dBA1lY_9MeTam4mN7-2vKVS4ge0SM="
+        alt="banner image">
+      <div class="login">
+        <h1>Beans Coffee <br>會員登入</h1>
+        <hr>
+        <form>
+          <label for="username">帳號：</label>
+          <input type="text" id="username" name="username" placeholder="請輸入您的帳號" required><br><br>
+          <label for="password">密碼：</label>
+          <input type="password" id="password" name="password" placeholder="請輸入您的密碼" required><br><br>
+          <div class="login-btn">
+            <button type="submit">送出</button>
+            <button type="reset">重置</button>
+            <button type="button" class="forgot-password">忘記密碼</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

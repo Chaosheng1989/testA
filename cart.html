@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Josh" content="Josh">
+  <meta name="description" content="發現來自世界各地最好的咖啡豆">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beans Coffee" />
+  <title>Beans Coffee購物清單</title>
+  <link rel="stylesheet" href="css/all.css" class="css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" class="animate-css">
+  <script src="JS/jquery-3.6.4.min.js"></script> 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT1H98HX27"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TT1H98HX27');
+  </script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  -->
+  <!-- <script src="JS/jquery-3.6.4.min.js"></script> -->
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <nav>
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li><a href="https://chaosheng1989.github.io/BeansCoffee/index.html#about-us">關於我們</a></li>
+            <li><a href="https://chaosheng1989.github.io/BeansCoffee/index.html#product-head">產品列表</a></li>
+            <li><a href="signup.html">註冊會員</a></li>
+            <li><a href="login.html" class="login-btn">會員登入</a></li>
+          </ul>
+          <div class="cart-icon-wrapper">
+            <a href="cart.html" class="cart-btn">購物車</a>
+            <div class="menu-icon">&#9776;</div><!-- 新增漢堡選單按鈕 -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="cart-banner">
+      <img
+        src="https://media.istockphoto.com/id/1411720693/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=8k47TxB-D4c5J-dBA1lY_9MeTam4mN7-2vKVS4ge0SM="
+        alt="banner image">
+      <div class="cart-list">
+        <h1>Beans Coffee 購物清單</h1>
+        <div class="cart-items-scroll-X">
+        <table>
+          <thead>
+            <tr>
+              <th>商品</th>
+              <th>規格</th>
+              <th>單價</th>
+              <th>數量</th>
+              <th>小計</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody class="cart-items">
+            
+            <!-- 購物清單內的項目動態生成 -->
+            <!-- <tr>
+              <td class="cart-product"><span class="cart-product-name"></span></td>
+              <td class="cart-product-specs"><span class="cart-product-spec"></span></td>
+              <td class="cart-unit-price"><span class="cart-unit-price-value"></span></td>
+              <td class="quantity-cell">
+                <input type="number" class="cart-quantity-input" value="1" min="1">
+              </td>
+              <td class="subtotal"><span class="cart-subtotal"></span></td>
+              <td>
+                <button class="cart-remove" type="button">移除</button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+        <div class="cart-empty">
+          <!-- <p>購物車是空的。<br>繼續瀏覽產品列表，選擇你想要的產品。</p> -->
+        </div>
+        <div class="total">
+          <div class="shipping">運費：$<span date-freight="200">200</span></div>
+          <div class="grand-total">總金額：<span class="cart-grand-total-value"></span></div>
+        </div>
+        <div class="shiooinginformation">
+          <div class="orderinformation">
+            <h2>收件人資訊</h2>
+          </div>
+          <form>
+            <div>
+              <label for="name">姓名：</label>
+              <input type="text" id="name" required>
+            </div>
+            <div>
+              <label for="phone">電話：</label>
+              <input type="tel" id="phone" required>
+            </div>
+            <div>
+              <label for="address">地址：</label>
+              <input type="text" id="address" required>
+            </div>
+          </form>
+          <button class="cart-submit" type="button">確認送出</button>
+          <button class="cart-continue" onclick="window.location.href='index.html#product-head'"
+            type="button">繼續購物</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="JS/js.js"></script><!-- 移至HTML,提升渲染交互性 -->
+</html>

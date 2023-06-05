@@ -1,0 +1,10 @@
+// base .scss
+/* 全域 border box */
+*,*::before,*::after{
+	box-sizing: border-box;
+  }
+  
+  body {
+	font-family: "Microsoft JhengHei Bold", sans-serif;
+  }
+//全域 end

@@ -1,0 +1,959 @@
+@import "reset";
+@import "base";
+// $linkcolor:#000;
+$font-l:1.5rem;
+$font-m:1.25rem;
+$font-s:0.8rem;
+
+
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: rgb(0, 6, 18);
+  transition: height 0.5s ease;
+  height: auto;
+}
+
+.logo {
+  flex: 1;
+  img {
+    width: 150px;
+    height: 50px;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+}
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  float: right;
+  transition: transform 0.5s ease;
+  flex: 2;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: #dacdcd;
+  font-size: $font-m;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav a:hover {
+  color: #000;
+}
+
+.cart-btn {
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+nav .cart-btn img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav .cart-btn:hover img {
+  transform: scale(1.2);
+}
+
+nav li:hover a:not(.cart-btn) {
+  transform: scale(1.2);
+  color: aquamarine;
+}
+.cart-btn:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+  color: #000;
+}
+
+#about-us {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none; /* 初始先隱藏漢堡選單按鈕 */
+}
+@media (max-width: 767px) {
+  .header {
+    height: auto;
+    position: relative;
+  }
+  .menu-wrapper {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .menu {
+    display: none; /* 初始先隱藏 menu 選單 */
+    position: absolute;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(250, 247, 247);
+    z-index: 1;
+  }
+  .menu-icon {
+    display: block; /* 手機版顯示漢堡選單按鈕 */
+    cursor: pointer;
+    font-size: $font-l;
+    color: rgb(232, 237, 236);
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  .menu-icon.active {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease-in-out;
+  }
+  .menu-show {
+    display: flex !important; /* 漢堡選單展開後，強制顯示 */
+    flex-direction: column;
+    align-items: center;
+    max-height: auto;
+  }
+  .menu li {
+    margin: 0 1rem;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    background-color: rgb(0, 6, 18);
+  }
+  .cart-btn {
+    margin-right: 20px;
+  }
+  .cart-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .banner-show {
+    margin-top: 15%;
+  }
+}
+/* banner */
+
+.banner {
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 66.67%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(0, 6, 18);
+  font-weight: bold;
+  h1 {
+    font-size: $font-l;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px black;
+  }
+  p {
+    font-size: $font-m;
+    line-height: 2;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0px 1px black;
+  }
+}
+@media (max-width: 767px) {
+  .banner-text {
+    white-space: nowrap;
+    h1 {
+      font-size: $font-m;
+    }
+    p {
+      font-size: $font-s;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .banner-text {
+    white-space: nowrap;
+    h1 {
+      font-size: $font-s;
+    }
+    p {
+      font-size: $font-s;
+    }
+  }
+}
+.search-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  input[type="text"] {
+    flex: 1;
+    margin-right: 0.5rem;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 2.5rem 0 0 2.5rem;
+    width: 20rem;
+    font-size: $font-m;
+  }
+  button {
+    background-color: rgb(31, 5, 5);
+    color: #fff;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0 1rem 1rem 0;
+    font-size: $font-m;
+    cursor: pointer;
+  }
+}
+.search-form input[type="text"],
+.search-form button {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .search-form input[type="text"] {
+    max-width: 13rem;
+  }
+  .search-form button {
+    cursor: pointer;
+  }
+}
+/* 商品清單 */
+#product-head h2 {
+  font-size: $font-l;
+  font-weight: bold;
+}
+/* 商品列表外框 */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* 商品列表內每個商品 */
+.product-item {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 商品圖片 */
+.product-image {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 商品名稱 */
+.product-name {
+  font-size: $font-m;
+  font-weight: bold;
+}
+
+/* 商品敘述 */
+.product-description {
+  font-size: $font-s;
+  line-height: 1.3;
+  padding: 10px;
+  min-width: 230px;
+  width: 100%;
+}
+
+/* 規格按鈕外框 */
+.product-specs {
+  display: flex;
+}
+
+.spec-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: #f2f5f6;
+  cursor: pointer;
+}
+.spec-btn:active{
+    background: gray;
+}
+
+/* 庫存狀態 */
+.inventory {
+  margin: 10px;
+  font-size: $font-s;
+  color: green;
+}
+
+/* 價格 */
+.price {
+  margin: 10px;
+  font-size: $font-m;
+  font-weight: bold;
+}
+
+/* 數量 */
+.quantity {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* 減號按鈕 */
+.quantity .minus-btn {
+  padding: 5px;
+  border: none;
+  background-color: #ddd;
+  font-size: $font-m;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+}
+
+/* 數量輸入框 */
+.quantity .input {
+  width: 50px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  font-size: $font-s;
+}
+
+.product-quantity {
+  text-align: center;
+}
+
+.quantity-input {
+  text-align: center;
+  width: 15px;
+}
+
+/* 加號按鈕 */
+.quantity .plus-btn {
+  padding: 5px;
+  border: none;
+  background-color: #ddd;
+  font-size: $font-m;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 230px;
+  width: 100%;
+}
+/* 加入購物車按鈕 */
+.add-to-cart-btn {
+  display: flex;
+  margin: 10px auto;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  font-size: $font-m;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 直接結帳按鈕 */
+.checkout-btn {
+  display: flex;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: #fff;
+  font-size: $font-l;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 關於Beans Coffee */
+#about-us {
+  background-image: url(../img/interlaced.png);
+  width: 100%;
+  h2 {
+    padding: 30px 0;
+    font-weight: bold;
+    font-size: $font-l;
+  }
+  p {
+    font-size: $font-s;
+    line-height: 1.5;
+  }
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/interlaced.png);
+}
+.about-us-text {
+  max-width: 50%;
+  line-height: 1.3;
+  text-indent: 20px;
+}
+.about-us-image {
+  max-width: 200px;
+  padding-top: 70px;
+  padding-left: 5%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  #about-us {
+    width: 100%;
+    height: auto;
+  }
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-us-text {
+    max-width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 2rem;
+  }
+  .about-us-image {
+    max-width: 50%;
+    padding: 30px 0;
+    margin: 0 auto;
+  }
+}
+/* footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 0;
+  background-color: #000000;
+  color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+.contact-info h3,
+.message-board h3 {
+  font-size: $font-l;
+  margin-bottom: 20px;
+  color: #607bc0;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact-info ul {
+  line-height: 1.8;
+}
+.contact-info li {
+  font-size: $font-s;
+  padding: 5px;
+}
+.contact-info img {
+  filter: invert(100%);
+  vertical-align: middle;
+  max-height: 25px;
+  padding-right: 10px;
+}
+.message-board {
+  padding-left: 10%;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    font-size: $font-s;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+  }
+}
+.message-board input,
+.message-board textarea {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: $font-s;
+  text-align: left;
+  width: 100%;
+}
+
+.message-board textarea {
+  width: 100%;
+  max-height: 120px;
+}
+
+.message-board button {
+  padding: 10px 20px;
+  background-color: #607bc0;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  font-size: $font-s;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    order: 2;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .message-board {
+    order: 1;
+    padding-left: 0;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+  }
+}
+
+/* signup.html 註冊會員流程 */
+.signup-banner {
+  max-width: 100%;
+  max-height: 30%;
+  padding-bottom: 66.67%;
+  position: relative;
+  margin: 0 auto;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.signup::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://media.istockphoto.com/id/1411720693/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=8k47TxB-D4c5J-dBA1lY_9MeTam4mN7-2vKVS4ge0SM=);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6; /* 設置透明度 */
+  z-index: -1; /* 把偽元素移到背景 */
+}
+.signup {
+  margin: 0 auto;
+  position: relative;
+  background-color: rgba(128, 128, 128, 0.61);
+  padding-top: 30px;
+  max-width: 60%;
+  border-radius: 0 0 10px 10px;
+  h1 {
+    text-align: center;
+    padding: 30px 0px;
+    font-size: $font-l;
+    font-weight: bold;
+    line-height: 1.3;
+  }
+  form {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  label {
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: $font-m;
+  }
+}
+.from-row{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+.signup input[type="text"],
+.signup input[type="password"],
+.signup input[type="email"],
+.signup input[type="tel"] {
+  width: 100%;
+  max-width: 250px;
+  height: 30px;
+  font-size: $font-s;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+.signup .btn {
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 50%;
+}
+.signup input[type="submit"],
+.signup input[type="reset"] {
+  background-color: #123aca;
+  color: rgb(223, 217, 217);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  font-size: $font-s;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.signup input[type="submit"]:hover,
+.signup input[type="reset"]:hover {
+  background-color: #dfbf0e;
+  color: #000;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .signup {
+    min-width: 90%;
+  }
+}
+
+/* login.hmtl 會員登入 */
+.login-banner {
+  max-width: 100%;
+  height: 100%;
+  padding-bottom: 15%;
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.login::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://media.istockphoto.com/id/1411720693/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=8k47TxB-D4c5J-dBA1lY_9MeTam4mN7-2vKVS4ge0SM=);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.6; /* 設置透明度 */
+  z-index: -1; /* 把偽元素移到背景 */
+}
+.login {
+  margin: 0 auto;
+  position: relative;
+  background-color: rgba(128, 128, 128, 0.61);
+  padding-top: 30px;
+  max-width: 60%;
+  border-radius: 0 0 10px 10px;
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: $font-l;
+    padding: 30px 0px;
+    line-height: 1.3;
+  }
+  form {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: $font-l;
+  }
+  label {
+    display: inline-block;
+    max-width: 80px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: $font-m;
+  }
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 220px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.login button {
+  background-color: #0066cc;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: $font-l;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+.login button:hover {
+  background-color: #dfbf0e;
+  color: #000;
+  font-weight: bold;
+}
+
+.forgot-password {
+  background-color: #1fc6be;
+  color: #1c0b0b;
+  text-decoration: underline;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  background-color: #dfbf0e;
+}
+
+@media (max-width: 767px) {
+  .login {
+    min-width: 90%;
+    label {
+      padding-bottom: 3%;
+    }
+  }
+}
+/* cart.html購買清單 */
+.cart-banner {
+  max-width: 100%;
+  padding-bottom: 66.67%;
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.cart-list {
+  max-width: 80%;
+  width: 450px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background-color: rgb(150, 219, 160);
+  border-radius: 0 0 10px 10px;
+  h2 {
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: $font-l;
+  }
+  table {
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+}
+.cart-list th,
+td {
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: $font-m;
+  line-height: 20px;
+}
+
+th {
+  background-color: #ccc;
+  border: 1px solid #fff;
+}
+
+td.price,
+td.subtotal {
+  font-weight: bold;
+}
+
+td.subtotal {
+  color: blue;
+}
+.quantity-cell {
+  vertical-align: middle;
+  width: 50px;
+}
+.quantity {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: $font-l;
+}
+
+.orderinformation {
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom: 1px solid gray;
+}
+.shiooinginformation button {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+
+.shiooinginformation button:hover {
+  background-color: #aaa;
+}
+
+.shiooinginformation input[type="number"] {
+  width: 50px;
+}
+
+.shiooinginformation form div {
+  margin-bottom: 10px;
+}
+
+.shiooinginformation form label {
+  display: inline-block;
+  width: 80px;
+  font-weight: bold;
+}
+
+.shiooinginformation form input {
+  padding: 5px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.shiooinginformation button.submit {
+  background-color: red;
+  border: none;
+  color: rgb(5, 1, 27);
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $font-s;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-right: 50px;
+}
+.shiooinginformation button.submit:hover{
+  background-color: pink;
+  padding: 13px 22px;
+}
+.shiooinginformation button.continue {
+  background-color: #008cba;
+  border: none;
+  color: rgb(21, 19, 19);
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $font-s;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.shiooinginformation button.continue:hover{
+  background-color: blue;
+  color:blue;
+  font-weight: bold;
+}

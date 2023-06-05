@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Josh" content="Josh">
+  <meta name="description" content="發現來自世界各地最好的咖啡豆">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Beans Coffee" />
+  <title>Beans Coffee</title>
+  <link rel="stylesheet" href="css/all.css" class="css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" class="animate-css">
+  <!-- <script src="JS/jquery-3.6.4.min.js"></script>  -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TT1H98HX27"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TT1H98HX27');
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+      </div>
+      <nav>
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li><a href="#about-us">關於我們</a></li>
+            <li><a href="#product-head">產品列表</a></li>
+            <li><a href="signup.html">註冊會員</a></li>
+            <li><a href="login.html" class="login-btn">會員登入</a></li>
+          </ul>
+          <div class="cart-icon-wrapper">
+            <a href="cart.html" class="cart-btn">購物車</a>
+            <div class="menu-icon">&#9776;</div><!-- 新增漢堡選單按鈕 -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="banner">
+      <img
+        src="https://media.istockphoto.com/id/1411720693/photo/tasty-cups-of-coffee.jpg?s=612x612&w=0&k=20&c=8k47TxB-D4c5J-dBA1lY_9MeTam4mN7-2vKVS4ge0SM="
+        alt="banner image">
+      <div class="banner-text">
+        <h1 class="animate__backInDown">Best Coffee Beans</h1>
+        <p class="animate__backInDown">發現來自世界各地最好的咖啡豆</p>
+        <form class="search-form">
+          <input type="text" id="search-input" placeholder="Search for coffee beans">
+          <button type="submit" id="search-button">Search</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 商品清單 -->
+    <div id="product-head">
+      <div class="product-head-title">
+        <h2>產品列表</h2>
+      </div>
+      <div class="product-search-results">
+        <button type="button" id="show-all-btn">顯示所有產品</button>
+      </div>
+    </div>
+    <div class="product-list">
+      <div class="product-item" id="product1">
+        <div>
+          <img class="product-image" src="img/product1.png" alt="NO.1 哥倫比亞豆">
+        </div>
+        <div class="product-description">
+          <h3 class="product-name" data-product-name="哥倫比亞豆">NO.1 哥倫比亞豆</h3>
+          <p class="product-info">哥倫比亞是咖啡豆的主要出產國之一，其豆子呈現出鮮明的果香味和平衡的口感，是許多人喜愛的選擇。</p>
+          <div id="product1-specs" class="product-specs">
+            <button class="spec-btn active" data-price="299" data-weight="113.5"
+              data-spec="1/4磅113.5g(豆)">1/4磅113.5g(豆)</button>
+            <button class="spec-btn" data-price="499" data-weight="227" data-spec="半磅227g(豆)">半磅227g(豆)</button>
+          </div>
+          <div class="product-price">
+            <div class="product-price-info">
+              <div class="product-stock">
+                <p>庫存： <span class="stock-quantity">50</span></p>
+              </div>
+              <div class="unit-price">單價：NT$ <span class="price-value">299</span></div>
+              <div class="total-price">總金額：NT$ <span class="price-value">299</span></div>
+            </div>
+            <div class="product-quantity">
+              <button class="quantity-btn minus-btn">-</button>
+              <input class="quantity-input" type="text" value="1">
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div class="buy">
+            <button id="add-to-cart-btn-1" class="add-to-cart-btn" type="button">加入購物</button>
+            <button id="checkout-btn-1" class="checkout-btn" onclick="window.location.href='cart.html'" type="button">直接結帳</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-item" id="product2">
+        <div>
+          <img class="product-image" src="img/product2.png" alt="NO.2 肯亞AA豆">
+        </div>
+        <div class="product-description">
+          <h3 class="product-name" data-product-name="肯亞AA豆">NO.2 肯亞AA豆</h3>
+          <p class="product-info">肯亞的咖啡豆本身帶有濃濃的果香味，味道強烈豐富，入口果酸完整轉化成帶有甜味的果香，非常滑順，味道瀰漫口腔。</p>
+          <div id="product2-specs" class="product-specs">
+            <button class="spec-btn active" data-price="349" data-weight="50.5"
+              data-spec="1/4磅50.5g(豆)">1/4磅50.5g(豆)</button>
+            <button class="spec-btn" data-price="600" data-weight="101" data-spec="半磅101g(豆)">半磅101g(豆)</button>
+          </div>
+
+          <div class="product-price">
+            <div class="product-price-info">
+              <div class="product-stock">
+                <p>庫存： <span class="stock-quantity">30</span></p>
+              </div>
+              <div class="unit-price">單價：NT$ <span class="price-value">349</span></div>
+              <div class="total-price">總金額：NT$ <span class="price-value">349</span></div>
+            </div>
+            <div class="product-quantity">
+              <button class="quantity-btn minus-btn">-</button>
+              <input class="quantity-input" type="text" value="1">
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div class="buy">
+            <button id="add-to-cart-btn-2" class="add-to-cart-btn" type="button">加入購物</button>
+            <button id="checkout-btn-2" class="checkout-btn" onclick="window.location.href='cart.html'"  type="button">直接結帳</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="product-item" id="product3">
+        <div>
+          <img class="product-image" src="img/product3.png" alt="NO.3 印尼摩卡豆">
+        </div>
+        <div class="product-description">
+          <h3 class="product-name" data-product-name="印尼摩卡豆">NO.3 印尼摩卡豆</h3>
+          <p class="product-info">印尼的摩卡豆是具有濃郁口感和深色色澤的咖啡豆，其風味包含了巧克力和焦糖的味道，適合喜愛濃郁風味的人飲用。</p>
+          <div id="product3-specs" class="product-specs">
+            <button class="spec-btn active" data-price="259" data-weight="113.5"
+              data-spec="1/4磅113.5g(豆)">1/4磅113.5g(豆)</button>
+            <button class="spec-btn" data-price="500" data-weight="227" data-spec="半磅227g(豆)">半磅227g(豆)</button>
+          </div>
+
+          <div class="product-price">
+            <div class="product-price-info">
+              <div class="product-stock">
+                <p>庫存： <span class="stock-quantity">30</span></p>
+              </div>
+              <div class="unit-price">單價：NT$ <span class="price-value">259</span></div>
+              <div class="total-price">總金額：NT$ <span class="price-value">259</span></div>
+            </div>
+            <div class="product-quantity">
+              <button class="quantity-btn minus-btn">-</button>
+              <input class="quantity-input" type="text" value="1">
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div class="buy">
+            <button id="add-to-cart-btn-3" class="add-to-cart-btn" type="button">加入購物</button>
+            <button id="checkout-btn-3" class="checkout-btn" onclick="window.location.href='cart.html'"  type="button">直接結帳</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item" id="product4">
+        <div>
+          <img class="product-image" src="img/product4.png" alt="厄瓜多爾藍山豆">
+        </div>
+        <div class="product-description">
+          <h3 class="product-name" data-product-name="厄瓜多爾藍山豆">NO.4 厄瓜多爾藍山豆</h3>
+          <p class="product-info">厄瓜多爾的藍山豆是一種優質的咖啡豆，具有較高的酸度和清新的口感，其風味具有柑橘、藍莓和巧克力等味道。</p>
+          <div id="product4-specs" class="product-specs">
+            <button class="spec-btn active" data-price="399" data-weight="113.5"
+              data-spec="1/4磅113.5g(豆)">1/4磅113.5g(豆)</button>
+            <button class="spec-btn" data-price="700" data-weight="227" data-spec="半磅227g(豆)">半磅227g(豆)</button>
+          </div>
+          <div class="product-price">
+            <div class="product-price-info">
+              <div class="product-stock">
+                <p>庫存： <span class="stock-quantity">20</span></p>
+              </div>
+              <div class="unit-price">單價：NT$ <span class="price-value">399</span></div>
+              <div class="total-price">總金額：NT$ <span class="price-value">399</span></div>
+            </div>
+            <div class="product-quantity">
+              <button class="quantity-btn minus-btn">-</button>
+              <input class="quantity-input" type="text" value="1">
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div class="buy">
+            <button id="add-to-cart-btn-4" class="add-to-cart-btn" type="button">加入購物</button>
+            <button id="checkout-btn-4" class="checkout-btn" onclick="window.location.href='cart.html'"  type="button">直接結帳</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-item" id="product5">
+        <div>
+          <img class="product-image" src="img/product5.png" alt="NO.5 印度曼特寧豆">
+        </div>
+        <div class="product-description">
+          <h3 class="product-name" data-product-name="印度曼特寧豆">NO.5 印度曼特寧豆</h3>
+          <p class="product-info">曼特寧豆是一種具有濃厚口感和深色色澤的咖啡豆，其風味具有焦糖、巧克力和木質的味道，適合喜愛濃郁風味的人飲用。</p>
+          <div id="product5-specs" class="product-specs">
+            <button class="spec-btn active" data-price="399" data-weight="113.5"
+              data-spec="1/4磅113.5g(豆)">1/4磅113.5g(豆)</button>
+            <button class="spec-btn" data-price="700" data-weight="227" data-spec="半磅227g(豆)">半磅227g(豆)</button>
+          </div>
+
+          <div class="product-price">
+            <div class="product-price-info">
+              <div class="product-stock">
+                <p>庫存： <span class="stock-quantity">30</span></p>
+              </div>
+              <div class="unit-price">單價：NT$ <span class="price-value">399</span></div>
+              <div class="total-price">總金額：NT$ <span class="price-value">399</span></div>
+            </div>
+            <div class="product-quantity">
+              <button class="quantity-btn minus-btn">-</button>
+              <input class="quantity-input" type="text" value="1">
+              <button class="quantity-btn plus-btn">+</button>
+            </div>
+          </div>
+          <div class="buy">
+            <button id="add-to-cart-btn-5" class="add-to-cart-btn" type="button">加入購物</button>
+            <button id="checkout-btn-5" class="checkout-btn" onclick="window.location.href='cart.html'"  type="button">直接結帳</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 關於我們 -->
+    <section id="about-us">
+      <div class="about-us-container">
+        <div class="about-us-text">
+          <h2>關於Beans Coffee</h2>
+          <p>
+            我們的咖啡豆都是由優質的咖啡生豆經過嚴格的挑選、烘焙、包裝等多個過程精心製作而成的。烘焙是製作高品質咖啡的重要步驟之一，透過掌握烘焙的溫度、時間、烘焙程度等因素，能夠調整咖啡豆的香氣、風味、口感等特點，讓咖啡豆釋放出最完美的風味。
+          </p>
+          <br>
+          <P>Coffee採用德國原裝 最新型 PROBAT P05 III 烘豆機
+            精密的電控系統、高效率的加熱裝置
+            特殊設計的攪拌葉片、優秀的續溫效果
+            使豆子均勻地受熱，呈現品質穩定的烘培
+            讓咖啡豆的乾淨度和風味層次達到最大值</P>
+        </div>
+        <div class="about-us-image">
+          <img src="img/about-us-image.png" alt="咖啡烘焙圖片">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="contact-info">
+        <h3>聯絡 Beans Coffee</h3>
+        <ul>
+          <li><img src="https://solciotyfitness.com/wp-content/uploads/2018/01/IG-ICON.png" alt="icon-IG">@Beans Coffee
+          </li>
+          <li><img src="https://tse2.mm.bing.net/th?id=OIP.4xLs9jjcHTb-bV3UO3wjYwHaHa&pid=Api&P=0"
+              alt="icon-Line">@Beans
+            Coffee</li>
+          <li><img src="https://tse1.mm.bing.net/th?id=OIP.2aVHI7su9zFXenkQv1_91wHaHa&pid=Api&P=0"
+              alt="icon-mail">Beans@coffee.com</li>
+          <li><img src="http://pluspng.com/img-png/iphone-png-png-iphone-icon-1600.png" alt="icon-phone">1234-567-890
+          </li>
+          <li><img src="https://tse1.mm.bing.net/th?id=OIP.0DrBXm7u21ONe11igTL7vQHaHa&pid=Api&P=0"
+              alt="map">台中市幸福區鵬程里168號
+          </li>
+          <li><img src="https://tse1.mm.bing.net/th?id=OIP.qmdjtO93dlutx6OjkKdysgHaHa&pid=Api&P=0"
+              alt="com">www.beanscoffee.com.tw</li>
+          <br>
+          <br>
+          <li>Copyright © 2023- Web Design by Josh</li>
+        </ul>
+      </div>
+      <div class="message-board">
+        <h3>留言板</h3>
+        <form>
+          <label for="name">姓名:</label>
+          <input type="text" id="name" name="name">
+          <label for="email">電子郵件:</label>
+          <input type="email" id="email" name="email">
+          <label for="message">留言:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">發送</button>
+        </form>
+      </div>
+    </footer>
+
+  </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+  <script src="JS/jquery-3.6.4.min.js"></script>
+  <script src="JS/js.js"></script>
+</body>
+
+</html>
